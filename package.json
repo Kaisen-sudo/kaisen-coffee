@@ -6,8 +6,8 @@
   "description": "Kaisen Coffee — boutique e-commerce premium (HTG).",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview",
+    "build": "vite build",
+    "preview": "vite vite",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

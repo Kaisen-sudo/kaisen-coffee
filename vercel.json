@@ -1,0 +1,13 @@
+cd ~/kaisen-coffee
+
+cat > vercel.json << 'EOF'
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
+EOF
+
+git add vercel.json
+git commit -m "Add SPA rewrites for React Router"
+git push

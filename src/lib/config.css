@@ -1,0 +1,56 @@
+/**
+ * Central brand configuration.
+ * Replace the placeholder contact details below before going live.
+ */
+
+export const BRAND = {
+  name: 'Kaisen Coffee',
+  tagline: "L'art du café, révélé.",
+  description:
+    'Maison de café premium. Torréfaction artisanale, origines traçables, rituel quotidien sublimé.',
+
+  // Placeholders — replace before launch.
+  contact: {
+    email: 'hello@kaisencoffee.com',
+    whatsapp: '+1 000 000 0000',
+    whatsappUrl: 'https://wa.me/10000000000',
+    instagram: '@kaisencoffee',
+    instagramUrl: 'https://instagram.com/kaisencoffee',
+    address: 'Port-au-Prince, Haïti',
+    hours: 'Lun – Sam · 8h – 18h',
+  },
+
+  currency: {
+    code: 'HTG',
+    symbol: 'G',
+    locale: 'fr-HT',
+  },
+
+  shipping: {
+    freeThreshold: 4000,        // 4 000 G
+    standardFee: 250,           // 250 G
+    expressFee: 600,            // 600 G
+    pickupFee: 0,
+  },
+
+  tax: {
+    rate: 0,                    // TVA non applicable en démo
+  },
+
+  social: {
+    instagram: 'https://instagram.com/kaisencoffee',
+    facebook: 'https://facebook.com/kaisencoffee',
+    tiktok: 'https://tiktok.com/@kaisencoffee',
+  },
+
+  promo: {
+    // Demo codes
+    codes: {
+      KAISEN10: { type: 'percent', value: 10, label: '10 % de réduction' },
+      WELCOME15: { type: 'percent', value: 15, label: 'Bienvenue — 15 %' },
+      LIVRAISON: { type: 'shipping', value: 100, label: 'Livraison offerte' },
+    } as Record<string, { type: 'percent' | 'shipping'; value: number; label: string }>,
+  },
+} as const;
+
+export type Brand = typeof BRAND;
